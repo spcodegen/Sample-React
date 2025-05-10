@@ -1,28 +1,18 @@
 import './App.css'
-import HeaderContent from './Components/HeaderContent/HeaderContent'
-
 function App() {
 
-  function hello01() {
-    console.log("Hello 01");
-  }
-
-  //Arrow Function
-  const hello02 = () => {
-    console.log("Hello 02");
-  }
-
-  const hello03 = (name) => {
-    console.log("Hello 03 " + name);
+  const p2 = {
+    backgroundColor: 'blue',
+    color:'white',
+    fontSize:'1.2rem',
   }
 
   return (
     <>
       <div id='wrapper'>
-        <HeaderContent />
-        <button onClick={hello01} >Click 01</button>
-        <button onClick={hello02} >Click 02</button>
-        <button onClick={() => { hello03("sandeep"); }} >Click 03</button>
+        <p className='p1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, rem molestias possimus voluptas cupiditate impedit sapiente praesentium, dolores, nesciunt placeat cum distinctio est. Est non tempore quod porro unde. Sit.</p>
+        <p style={p2}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci illum voluptas eaque maxime dignissimos aliquam ipsum recusandae repellat. Modi error nobis officiis rerum. Nemo rem ipsam omnis odit, velit nobis?
+        </p>
       </div>
     </>
   )
