@@ -1,0 +1,10 @@
+#navcontent{
+    min-height: 10vh;
+    background-color: #000000;
+}
+
+img{
+    float: left;
+    padding-top: 15px;
+    padding-left: 15px;
+}
