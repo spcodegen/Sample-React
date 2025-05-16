@@ -3,5 +3,10 @@
   padding: 0;
   box-sizing: 0;
 }
-
-.p1{background-color: black;font-size: 1.3rem;color: antiquewhite;padding: 10px 20px 30px 40px;margin-bottom: 10px;}
+#wrapper{
+  background-color: beige;
+}
+button{
+  width: 80px;
+  height: 25px;
+}
