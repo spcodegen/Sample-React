@@ -3,23 +3,24 @@ import './App.css'
 
 function App() {
 
-const loggedin = true;
-const names = [];
-const namearraysize = names.length;
+  function calSum(...res) {
+    let total = 0;
+    res.forEach(element => {
+      total += element;
+    });
+    return total;
+  }
+
+  function myBio(name, city,...res) {
+    console.log(name,city,res);
+  }
+
+  console.log(calSum(100, 27, 50, 40, 63, 80, 100));
+  myBio("sandeep","kandy","a","b","c","d");
+
   return (
     <>
-    {loggedin && <h4>Logged in</h4>}
-    {!loggedin && <h4>Logged out</h4>}
 
-    {/* Conditional rendering */}
-    {namearraysize >0 && names.map((name)=>{
-      return <h4>{name}</h4>
-    })}
-    {namearraysize == 0 && <h5>Array is Empty</h5>}
-    {/* Ternary Operators */}
-    {namearraysize >0 ?(names.map((name)=>{
-      return <h4>{name}</h4>
-    })) :(<h5>Array is Empty</h5>)}
     </>
   )
 }
