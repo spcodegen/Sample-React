@@ -3,21 +3,13 @@ import './App.css'
 
 function App() {
 
-  function calSum(...res) {
-    let total = 0;
-    res.forEach(element => {
-      total += element;
-    });
-    return total;
-  }
+  //list of items convert to array using rest operator use(...res)
+  //array covert to list of items using spread operator (...a)
 
-  function myBio(name, city,...res) {
-    console.log(name,city,res);
-  }
+  const a = [5,25,88,36,7,69,98,1];
 
-  console.log(calSum(100, 27, 50, 40, 63, 80, 100));
-  myBio("sandeep","kandy","a","b","c","d");
-
+  console.log(Math.min(...a));
+  
   return (
     <>
 
