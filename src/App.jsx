@@ -1,54 +1,24 @@
 import { useEffect, useState, useRef } from 'react'
 import './App.css'
 
+const items = ["item 1","item 2","item 3","item 4","item 5","item 6"]
+
 function App() {
-
-  const [input, setinput] = useState("SANDEEP");
-  const [count, setcount] = useState(0);
-
-  const countref = useRef(0);
-  const inputref = useRef();
-  const inputref1 = useRef();
-  const inputref2 = useRef();
-
-  useEffect(() => {
-    // setcount((count) => count + 1);
-    countref.current = countref.current + 1;
-    inputref.current.style.backgroundColor = "red";
-    inputref1.current.style.backgroundColor = "yellow";
-    
-  })
-
-  const handleChange = (e) => {
-    if (e.target.value.length == 0) {
-      setinput("<Input Text goes here>")
-    } else {
-      setinput(e.target.value);
-    }
-  }
-
-  const handleclick = () => {
-    if (inputref2.current.value == "") {
-      inputref2.current.focus();
-    }else if(inputref2.current.value >50){
-      alert("Success");
-    }else{
-      alert("Danger");
-    }
-  }
 
   return (
     <>
-      <input type="text" onChange={handleChange} ref={inputref1}/>
-      <p>You have input {input}</p>
-      <p>Rendered {countref.current}</p>
-      <input type="text" ref={inputref}/>
+    <ul>
+      {items.map((item) =>{
+        return (<li key={item}>from map method step 1 {item}</li>)
+      })}
 
-      <br /><br />
-      <input type="text" ref={inputref2}/>
-      <button onClick={handleclick}>Validate</button>
+      {items.map((item) => (
+        <li key={item}>from map method step 2 {item}</li>
+      ))}
+    </ul>
     </>
   )
+
 }
 
 export default App
